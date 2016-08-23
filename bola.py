@@ -22,14 +22,11 @@ racketrect.center = (400, 300)
 while 1:
    if ballrect.bottom > heigth:
        ballrect.bottom = heigth
-   if ballrect.right > width:
-       ballrect.right = width
    ballrect = ballrect.move(speed)
    if ballrect.bottom >= racketrect.top and ballrect.right >= racketrect.left and ballrect.left <= racketrect.right:
       speed[1] = -speed[1]
-      speed[1] = speed[1] - 1.5*gravity
-      raw_input("Press Enter to continue...")
-   
+      speed[1] = speed[1] - 1.5 * gravity
+#      raw_input("Press Enter to continue...")
    else:
         if ballrect.left < 0 or ballrect.right > width:
             speed[0] = -speed[0]
